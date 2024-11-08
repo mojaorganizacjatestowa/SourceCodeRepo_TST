@@ -64,7 +64,7 @@ jobs:
       - name: SetCommitStatus
         uses: myrotvorets/set-commit-status-action@master
         with:
-           token: ${{ secrets.TOKEN }}
+        #   token: ${{ secrets.TOKEN }}
            status: success
            context: BuildImage
            sha: ${{ github.sha }}
@@ -72,7 +72,7 @@ jobs:
       - name: Set Commit Status Omnilogy
         uses: omnilogy-pl/set-status-of-commit@1.1.0
         with:
-           token: ${{ secrets.TOKEN }}
+           #token: ${{ secrets.TOKEN }}
            artifacts: omniregistry/back-end:${{ github.sha }}
 
       
